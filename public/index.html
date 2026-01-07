@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Teacher Tracker - Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="login-card">
+      <h1>🎓 Campus Teacher Tracker</h1>
+      
+      <div class="role-selector">
+        <button class="role-btn active" data-role="teacher">👨‍🏫 Teacher</button>
+        <button class="role-btn" data-role="student">👩‍🎓 Student</button>
+      </div>
+
+      <form id="loginForm">
+        <input type="email" id="email" placeholder="College Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit" id="loginBtn">Login</button>
+      </form>
+
+      <div id="error" class="error-message"></div>
+      
+      <p class="signup-link">
+        Don't have an account? <a href="#" id="signupToggle">Sign Up</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+  
+  <script src="js/firebase-config.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

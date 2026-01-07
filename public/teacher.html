@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="dashboard">
+    <header>
+      <h1>👨‍🏫 Teacher Dashboard</h1>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </header>
+
+    <div class="dashboard-content">
+      <div class="status-card">
+        <h2>Current Status</h2>
+        <div class="status-display" id="currentStatus">Available</div>
+        
+        <div class="status-buttons">
+          <button class="status-btn available" data-status="available">✅ Available</button>
+          <button class="status-btn busy" data-status="busy">🟡 Busy</button>
+          <button class="status-btn unavailable" data-status="unavailable">🔴 Not Available</button>
+        </div>
+      </div>
+
+      <div class="location-card">
+        <h2>Current Location</h2>
+        <input type="text" id="locationInput" placeholder="e.g., Room 305, Lab 2">
+        <button id="updateLocationBtn">Update Location</button>
+      </div>
+
+      <div class="timetable-card">
+        <h2>Timetable</h2>
+        <textarea id="timetableInput" rows="10" placeholder="Paste your timetable here...
+Example:
+9:00 AM - 10:00 AM | Class A | Room 301
+10:00 AM - 11:00 AM | Class B | Room 302"></textarea>
+        <button id="uploadTimetableBtn">Save Timetable</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+  
+  <script src="js/firebase-config.js"></script>
+  <script src="js/teacher.js"></script>
+</body>
+</html>
